@@ -1,0 +1,18 @@
+{% extends 'sales_website/base.html' %}
+
+{% block title %}
+    {% if page_title %}
+        {{ page_title }} - Sales Website
+    {% else %}
+        Sales Website
+    {% endif %}
+{% endblock title %}
+
+{% block content %}
+<h1> Here is the inventory page</h1>
+<ul>
+    {% for item in inventory_items %}
+        <li>{{ item.item }} - {{ item.description }} - {{ item.price }} </li>
+    {% endfor %}
+</ul>
+{% endblock content %}

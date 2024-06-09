@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %} Sales Website {% endblock title %}</title>
+</head>
+<body>
+    <header> Here is the title</header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'sales-home' %}">Home</a></li>
+            <li><a href="{% url 'sales-about' %}">about</a></li>
+            <li><a href="{% url 'sales-inventory' %}">inventory</a></li>
+        </ul>
+    </nav>
+
+
+<main>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% block content %}
+    {% endblock content %}
+</main>
+
+<footer>
+    <p>&copy; 2024 My Website</p>
+</footer>
+</body>
+</html>
