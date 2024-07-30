@@ -1,2 +1,2 @@
 # literate-pancake
-All completed Python scsripts are here.
+All completed Python scripts are here.
