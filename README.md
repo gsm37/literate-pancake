@@ -1,2 +1,2 @@
 # literate-pancake
-python Code Projects
+All completed Python scsripts are here.
